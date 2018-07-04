@@ -2,14 +2,14 @@ import java.util.Random;
 
 public class Task3 {
 	public static void main(String[] args) {
-		Random rand = new Random();//рандом
-		int a = 1 + rand.nextInt(10);//рандом a
-		int b = 1 + rand.nextInt(10);//рандом b	
-		int r = 1 + rand.nextInt(20);//рандом r
+		Random rand = new Random();//СЂР°РЅРґРѕРј
+		int a = 1 + rand.nextInt(10);//СЂР°РЅРґРѕРј a
+		int b = 1 + rand.nextInt(10);//СЂР°РЅРґРѕРј b	
+		int r = 1 + rand.nextInt(20);//СЂР°РЅРґРѕРј r
 
 				
-		String c = ((a*a)+(b*b)) < (r*r) ? "да" : "нет";
-		System.out.println("Можно ли полностью накрыть прямоугольное отверстие размерами " + a + " мм и " + b + " мм " + "картонкой радиусом " + r + " мм: " + c);
+		String c = ((a*a)+(b*b)) < (r*r) ? "РґР°" : "РЅРµС‚";
+		System.out.println("РњРѕР¶РЅРѕ Р»Рё РїРѕР»РЅРѕСЃС‚СЊСЋ РЅР°РєСЂС‹С‚СЊ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРѕРµ РѕС‚РІРµСЂСЃС‚РёРµ СЂР°Р·РјРµСЂР°РјРё " + a + " РјРј Рё " + b + " РјРј " + "РєР°СЂС‚РѕРЅРєРѕР№ СЂР°РґРёСѓСЃРѕРј " + r + " РјРј: " + c);
 		
 	}	
 }

@@ -5,8 +5,8 @@ import java.util.Random;
 public class Task5{
 public static void main(String[] args){
 		
-	Random rand = new Random();//рандом
-	int a = 1000 + rand.nextInt(9000);//рандом
+	Random rand = new Random();//СЂР°РЅРґРѕРј
+	int a = 1000 + rand.nextInt(9000);//СЂР°РЅРґРѕРј
 	
 	//Method 1
 	System.out.println("Original: " + a);
@@ -17,8 +17,8 @@ public static void main(String[] args){
 	System.out.println("Reversed: " + last+""+third+""+second+""+first);
 
 	//Method 2
-	String b = String.valueOf(a); //переводим в String
-	b = new StringBuffer(b).reverse().toString(); //реверсв
+	String b = String.valueOf(a); //РїРµСЂРµРІРѕРґРёРј РІ String
+	b = new StringBuffer(b).reverse().toString(); //СЂРµРІРµСЂСЃРІ
 	System.out.println("Reversed2: " + b + " "+b.length());
 	
 	

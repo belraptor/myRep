@@ -2,21 +2,21 @@ import java.util.Random;
 
 public class Task6 {
 public static void main(String[] args) {
-	Random rand = new Random();//рандом
-	int a = 1000 + rand.nextInt(9000);//рандом
-	System.out.println("Число " + a);
-	//вычисляем цифры в числе
+	Random rand = new Random();//СЂР°РЅРґРѕРј
+	int a = 1000 + rand.nextInt(9000);//СЂР°РЅРґРѕРј
+	System.out.println("Р§РёСЃР»Рѕ " + a);
+	//РІС‹С‡РёСЃР»СЏРµРј С†РёС„СЂС‹ РІ С‡РёСЃР»Рµ
 	int fourth = a%10;
 	int third = a/10%10;
 	int second = a/100%10;
 	int first = a/1000;
 	
-	System.out.print("Цифры "); //задаём вопрос
+	System.out.print("Р¦РёС„СЂС‹ "); //Р·Р°РґР°С‘Рј РІРѕРїСЂРѕСЃ
 	if (first == second || first == third || first == fourth || second == third || second == fourth || third == fourth)
 	{
-		System.out.print("не");
+		System.out.print("РЅРµ");
 	}  
-		System.out.println("отличаются");
+		System.out.println("РѕС‚Р»РёС‡Р°СЋС‚СЃСЏ");
 		
 	
 	
