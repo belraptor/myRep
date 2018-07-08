@@ -13,21 +13,21 @@ public static void main (String [] args){
 	int max = mas[0];
 	int min = mas[0];
 	int x = 0, y = 0;
-	//находим максимальное число и его позицию
-	for (int i = 0; i < mas.length; i++){
+	
+	for (int i = 0; i < mas.length; i++){		//find the maximum number and its position
 		if (max <= mas[i]){
 			max = mas[i];
 			x = i;			
 		}
-	}System.out.println();
-	for (int i = 0; i < mas.length; i++){		
+	}
+	for (int i = 0; i < mas.length; i++){		//find the minimum number and its position
 		if (min >= mas[i]){
 			min = mas[i];
 			y = i;			
 		}					
 	}
-	//для случая когда максимальные и минимальные числа в нескольких ячейках
-	System.out.println("Позиция максимального числа " + x + " и минимального " + y);	
+	//for the case when the maximum and minimum numbers in several cells
+	System.out.println("\nПозиция максимального числа " + x + " и минимального " + y);	
 	int sum = 0;	
 	if (x < y) {
 		for (int i = x+1;i < y; i++){
