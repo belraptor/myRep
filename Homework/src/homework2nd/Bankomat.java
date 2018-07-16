@@ -9,6 +9,7 @@ class Bankomat {
 	int bills20 = 20;
 	int bills50 = 50;
 	int bills100 = 100;
+	int amountBills20, amountBills50, amountBills100;
 	
 	Bankomat(){
 		numberOfBills20 = 200;
@@ -52,7 +53,7 @@ class Bankomat {
 		return s;
 	}
 	String moreFineMoney() {
-		//in
+		
 		return null;
 	}
 	String averageMoney() {
