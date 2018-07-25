@@ -1,22 +1,20 @@
-package homework3rd.task4;
+package homework3rd.variantA.task4.country;
 
 public abstract class Country {
 	private String name;
 	private String capital;
-	public int area;
-/*
-	Country(String name, String capital, int area) {
-		this.name = name;
-		this.capital = capital;
-		this.area = area;
-	}
-*/
-	public String toString() {
-		return "Country: " + name + ", capital: " + capital;
+	private int area;
+
+//	public String toString() {
+//		return "Country: " + name + ", capital: " + capital + "area:" + area;
+//	}
+
+	public int getArea() {
+		return area;
 	}
 
-	public double getArea() {
-		return area;
+	public void setArea(int area) {
+		this.area = area;
 	}
 
 	public String getName() {
