@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Task3" xmlns:tns="http://www.example.org/Task3" elementFormDefault="qualified">
-<element name="Name" type="string"/>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Task3"
+	xmlns:tns="http://www.example.org/Task3" elementFormDefault="qualified">
+	<element name="Devices">
+		<complexType>
+			<sequence>
+				<element name="device" minOccurs="1" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="Name">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="20" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="Origin">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="20" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="Price">
+								<complexType>
+									<attribute name="currency" type="string"/>
+									<attribute name="value" type="decimal"/>
+								</complexType>
+							</element>
+							<element name="Type">
+								<complexType>
+									<complexContent>
+										<restriction base="anyType">
+											<attribute name="peripheral" type="boolean"/>
+											<attribute name="powerUsage" type="decimal"/>
+											<attribute name="availabilityCooler" type="boolean"/>
+											<attribute name="groupComponent">
+											<simpleType>
+											<restriction base="string">
+											<enumeration value="Main Conponent"/>
+											<enumeration value="Input-Output"/>
+											<enumeration value="Multimedia"/>
+											</restriction>
+											</simpleType>
+											</attribute>
+											<attribute name="ports">
+											<simpleType>
+											<restriction base="string">
+											<enumeration value="USB"/>
+											<enumeration value="LPT"/>
+											<enumeration value="COM"/>
+											</restriction>
+											</simpleType>
+											</attribute>
+										</restriction>
+									</complexContent>
+								</complexType>
+							</element>
+							<element name="Critical">
+								<simpleType>
+									<restriction base="boolean">
+									</restriction>
+								</simpleType>
+							</element>
+
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
 
 
-
-
-
+	</element>
 </schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Devices>
+<device>
+<Name>MotherBoard</Name>
+<Origin>China</Origin>
+<Price>US10</Price>
+<Type>false</Type>
+<Type>US10</Type>
+<Type>True</Type>
+<Type>Main Component</Type>
+<Type>USB</Type>
+<Critical>True</Critical>
+</device>
+
+</Devices>
