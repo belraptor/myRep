@@ -15,30 +15,38 @@ public static void main(String[] args) {
 	List<Integer> linkedList = new LinkedList<>();
 	TreeSet<Integer> treeSet = new TreeSet<>();
 	HashSet<Integer> hashSet = new HashSet<>();
-//	Map<String, Integer, Collection> hashMap = new HashMap<String, Integer, Collection>;
-	Measure (arrayList, "ArrayList");
-	Measure (linkedList, "LinkedList");
-	Measure (treeSet, "TreeSet");
-	Measure (hashSet, "HashSet");
+	Map<String, Object> hashMap = new HashMap<String, Object>();
+	
+	Measure (arrayList, "ArrayList", hashMap);
+	Measure (linkedList, "LinkedList", hashMap);
+	Measure (treeSet, "TreeSet", hashMap);
+	Measure (hashSet, "HashSet", hashMap);
+	for (Map.Entry entry : hashMap.entrySet()) {
+	    System.out.println(entry.getKey() + ", " + entry.getValue());
+	}
 }
 
-public static void Measure(Collection<Integer> coll, String string){
+public static void Measure(Collection<Integer> coll, String string, Map<String, Object> map){
 	int i;
-	long c = System.currentTimeMillis();
+	long c = System.currentTimeMillis();	
 	for (i=0; i< 10000;i++){
 		coll.add(new Integer(i));
 	}
-	System.out.println("Time for add 10000 elements in '" + string + "' collection is "+ (System.currentTimeMillis()-c) + "ms.");
+	int cAdd = (int) (System.currentTimeMillis()-c);
+	System.out.println("Collection '" + string + "'\nTime for ADD 10000 elements in collection is \t\t"+ cAdd + "ms.");
+	map.put(string, new HashMap<Integer, Object>());
+	Map<Integer, Object>inneredMap = (Map<Integer, Object>)map.get(string);
+	inneredMap.put(cAdd, coll);
 	c = System.currentTimeMillis();
 	for (i=0; i< 10000;i++){
 		coll.contains(new Integer(i));
 	}
-	System.out.println("Time for contains 10000 elements in '" + string + "' collection is "+ (System.currentTimeMillis()-c) + "ms.");
+	System.out.println("Time for CONTAINS 10000 elements in collection is \t"+ (System.currentTimeMillis()-c) + "ms.");
 	c = System.currentTimeMillis();
 	for (i=0; i< 10000;i++){
 		coll.remove(new Integer(i));
 	}
-	System.out.println("Time for remove 10000 elements in '" + string + "' collection is "+ (System.currentTimeMillis()-c) + "ms.\n");
+	System.out.println("Time for REMOVE 10000 elements in collection is \t"+ (System.currentTimeMillis()-c) + "ms.\n");
 }
 
 }
