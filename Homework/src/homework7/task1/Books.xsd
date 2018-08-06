@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Books"
+	xmlns:tns="http://www.example.org/Books" elementFormDefault="qualified">
+	<element name="BooksCatalogue">
+		<complexType>
+			<sequence>
+				<element name="book" minOccurs="1" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+						<element name="Number">
+								<simpleType>
+									<restriction base="ID">
+										<maxLength value="20" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="Title">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="20" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="Author">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="20" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="Genre">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="20" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="Year">
+								<simpleType>
+									<restriction base="decimal" />
+								</simpleType>
+							</element>
+							<element name="Cover">
+								<simpleType>
+									<restriction base="string">
+										<enumeration value="Hard cover" />
+										<enumeration value="Soft cover" />
+									</restriction>
+								</simpleType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

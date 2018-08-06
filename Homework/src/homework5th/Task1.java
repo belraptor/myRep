@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.TreeSet;
 
 public class Task1 {
+@SuppressWarnings("rawtypes")
 public static void main(String[] args) {
 	List<Integer> arrayList = new ArrayList<>();
 	List<Integer> linkedList = new LinkedList<>();
@@ -26,6 +27,7 @@ public static void main(String[] args) {
 	}
 }
 
+@SuppressWarnings("unchecked")
 public static void Measure(Collection<Integer> coll, String string, Map<String, Object> map){
 	int i;
 	long c = System.currentTimeMillis();	

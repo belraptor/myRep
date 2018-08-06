@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BookCatalogue>
+	<book>
+		<Number>1</Number>
+		<Title>Гарри поттер и узник Азкабана</Title>
+		<Author>Дж.К.Роулинг</Author>
+		<Genre>Фэнтези</Genre>
+		<Year>2017</Year>
+		<Cover>Hard cover</Cover>
+	</book>
+	<book>
+		<Number>2</Number>
+		<Title>Властелин колец</Title>
+		<Author>Джон Р.Р. Толкиен</Author>
+		<Genre>Фэнтези</Genre>
+		<Year>2001</Year>
+		<Cover>Hard cover</Cover>
+	</book>
+	<book>
+		<Number>3</Number>
+		<Title>Игра престолов</Title>
+		<Author>Джордж Р.Р. Мартин</Author>
+		<Genre>Фэнтези</Genre>
+		<Year>1996</Year>
+		<Cover>Hard cover</Cover>
+	</book>
+	<book>
+		<Number>4</Number>
+		<Title>Портрет Дориана Грея</Title>
+		<Author>Оскар Уайльд</Author>
+		<Genre>Фэнтези</Genre>
+		<Year>1890</Year>
+		<Cover>Hard cover</Cover>
+	</book>
+	<book>
+		<Number>5</Number>
+		<Title>Триумфальная арка</Title>
+		<Author>Эрих Мария Ремарк</Author>
+		<Genre>Проза</Genre>
+		<Year>1946</Year>
+		<Cover>Soft cover</Cover>
+	</book>
+	<book>
+		<Number>6</Number>
+		<Title>Дом странных детей</Title>
+		<Author>Ренсом Риггз</Author>
+		<Genre>Ужасы</Genre>
+		<Year>2011</Year>
+		<Cover>Hard cover</Cover>
+	</book>
+	<book>
+		<Number>7</Number>
+		<Title>Алхимик</Title>
+		<Author>Пауло Коэльо</Author>
+		<Genre>Проза</Genre>
+		<Year>1988</Year>
+		<Cover>Soft cover</Cover>
+	</book>
+	<book>
+		<Number>8</Number>
+		<Title>Краткая история времени</Title>
+		<Author>Стивен Хокинг</Author>
+		<Genre>Научная литература</Genre>
+		<Year>2010</Year>
+		<Cover>Hard cover</Cover>
+	</book>
+	<book>
+		<Number>9</Number>
+		<Title>Стрелок</Title>
+		<Author>Стивен Кинг</Author>
+		<Genre>Фэнтези</Genre>
+		<Year>1982</Year>
+		<Cover>Hard cover</Cover>
+	</book>
+	<book>
+		<Number>10</Number>
+		<Title>Маленький принц</Title>
+		<Author>Антуан де Сент-Экзюпери</Author>
+		<Genre>Философская сказка</Genre>
+		<Year>1943</Year>
+		<Cover>Hard cover</Cover>
+	</book>
+</BookCatalogue>
