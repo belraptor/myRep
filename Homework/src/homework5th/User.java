@@ -7,6 +7,24 @@ import java.util.Random;
 public class User {
 	
 	private String name;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public Calendar getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(Calendar dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 	private int age;
 	private static int year, month, dayOfMonth;
 	
