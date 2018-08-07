@@ -71,7 +71,7 @@ public class MyService {
 		return true;
 	}
 
-	@SuppressWarnings("unused")
+	
 	public /*private*/ String thisClassInfo() {
 		return "MyService [product=" + product + ", lightSource=" + lightSource + ", numberOfLightSources="
 				+ numberOfLightSources + "]";

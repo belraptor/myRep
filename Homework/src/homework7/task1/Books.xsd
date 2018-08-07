@@ -7,7 +7,7 @@
 				<element name="book" minOccurs="1" maxOccurs="unbounded">
 					<complexType>
 						<sequence>
-						<element name="Number">
+							<element name="Number">
 								<simpleType>
 									<restriction base="ID">
 										<maxLength value="20" />
@@ -46,6 +46,11 @@
 										<enumeration value="Hard cover" />
 										<enumeration value="Soft cover" />
 									</restriction>
+								</simpleType>
+							</element>
+							<element name="ReadingRoom">
+								<simpleType>
+									<restriction base="boolean" />
 								</simpleType>
 							</element>
 						</sequence>

@@ -1,14 +1,21 @@
 package homework7.task1;
 
 public class Book {
+	private int number;//index of book in library
 	private String title;
 	private String author;
 	private int year;
 	private String cover;
-	private int number;//numberOfBookInLibrary
+	private boolean readingRoom;
+	
 
-	public Book() {
-		super();
+	public Book(int number, String title, String author, int year, String cover, boolean readingRoom) {
+		this.number=number;
+		this.title=title;
+		this.author=author;
+		this.year=year;
+		this.cover=cover;
+		this.setReadingRoom(readingRoom);
 	}
 
 	public String getTitle() {
@@ -42,18 +49,26 @@ public class Book {
 	public void setCover(String cover) {
 		this.cover = cover;
 	}
-	public int number() {
+	public int getNumber() {
 		return year;
 	}
 
-	public void number(int number) {
+	public void setNumber(int number) {
 		this.number = number;
+	}
+
+	public boolean isReadingRoom() {
+		return readingRoom;
+	}
+
+	public void setReadingRoom(boolean readingRoom) {
+		this.readingRoom = readingRoom;
 	}
 
 	@Override
 	public String toString() {
-		return "Book [title=" + title + ", author=" + author + ", year=" + year + ", cover=" + cover
-				+ ", number=" + number+ "]";
+		return "Book [number=" + number + ", title=" + title + ", author=" + author + ", year=" + year + ", cover="
+				+ cover + ", readingRoom=" + readingRoom + "]";
 	}
 
 }
