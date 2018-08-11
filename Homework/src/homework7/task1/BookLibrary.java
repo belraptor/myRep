@@ -16,9 +16,11 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class BookLibrary {
-	private static List<Book> bookList = new ArrayList<Book>();
+	public static List<Book> bookList = new ArrayList<Book>();
+	private List<People> listPeopleReader = new ArrayList<People>();
+	 private List<Thread> threadsPeoplesReader = new ArrayList<>();
 	Random rand = new Random();
-	int timeToRead = 1000 + rand.nextInt(2000);
+	
 	// fill library
 	public BookLibrary(String pathFile, String tagName) throws ParserConfigurationException{
 		try {
@@ -74,5 +76,26 @@ public class BookLibrary {
 			 }
 		return "\n";		  	 		
 	 }
+	 
+	 public void startLibrary() throws InterruptedException {
+		 System.out.println("library start");   
+		 for (People people : listPeopleReader) {
+	            // запустим поток действий читателя
+	        	
+	            Thread thread = new Thread(people);
+	            threadsPeoplesReader.add(thread);
+	            thread.start();
+	}
+	        int countPeople = threadsPeoplesReader.size();
+	        while (countPeople>0){
+	        	for (Thread thr : threadsPeoplesReader){
+	        		if (thr.getState()==Thread.State.TERMINATED){
+	        			countPeople--;
+	        		}
+	        		Thread.sleep(2000);
+	        	}
+	        }
+	        System.out.println("library stop");
 
+}
 }

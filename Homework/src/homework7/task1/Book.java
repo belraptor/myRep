@@ -1,14 +1,19 @@
 package homework7.task1;
 
-public class Book {
+import java.util.Queue;
+import java.util.Random;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+public class Book implements Runnable {
 	private int number;//index of book in library
 	private String title;
 	private String author;
 	private int year;
 	private String cover;
 	private boolean readingRoom;
-	
-
+	Random rand = new Random();
+	int timeToRead = 1000 + rand.nextInt(2000);
+	//constructor
 	public Book(int number, String title, String author, int year, String cover, boolean readingRoom) {
 		this.number=number;
 		this.title=title;
@@ -17,7 +22,43 @@ public class Book {
 		this.cover=cover;
 		this.setReadingRoom(readingRoom);
 	}
+	public Queue<People> queuePeopleReader= new ConcurrentLinkedQueue<People>();
+	@Override
+	public void run(){
+		
+			while (!queuePeopleReader.isEmpty()){
+				People people = queuePeopleReader.poll();
+				try {
+					readBook(timeToRead, people.getName());
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}						
+			}
+		
+            
+}
+	
+	public void readBook (int timeToRead, String peopleName) throws InterruptedException{
+		System.out.println(peopleName + "start reading book " + this.getTitle());
+		Thread.sleep(timeToRead);
+		System.out.println(peopleName + "stop reading book " + this.getTitle());
+	}
+	
+	
+	
+	
 
+
+	//добавляем читателя
+	public void addQueuePeopleReader(People people){
+		queuePeopleReader.offer(people);
+	}
+	
+	//getters&setters
+	public Queue<People> getQueuePeopleReader() {
+		return queuePeopleReader;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -70,5 +111,6 @@ public class Book {
 		return "Book [number=" + number + ", title=" + title + ", author=" + author + ", year=" + year + ", cover="
 				+ cover + ", readingRoom=" + readingRoom + "]";
 	}
+	
 
 }

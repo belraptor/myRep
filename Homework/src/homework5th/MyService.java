@@ -1,6 +1,6 @@
 package homework5th;
 
-@Version(version = 1.0)
+@Version(version = 1.0, codeName="javaBegginer")
 public class MyService {
 
 	private String product;

@@ -9,7 +9,7 @@ public class DOMparser {
 		
 		
 		try {
-			BookLibrary bookLibrary = new BookLibrary("Homework\\src\\homework7\\task1\\Books.xml", "book");
+			BookLibrary bookLibrary = new BookLibrary("7-1_Books.xml", "book");
 			System.out.println(bookLibrary.toString());
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
