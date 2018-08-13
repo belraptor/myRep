@@ -1,18 +1,15 @@
 package homework9;
 
 public enum Genre {
-	Science_fiction(1),
-	Historical_drama(2),
-	Fantasy(3);
-	
+	Science_fiction, Historical_drama, Fantasy;
+
 	private int genreID;
-	private Genre(int genreID){
-		this.genreID=genreID;
-	}
+
 	public static int getGenreID(Genre genre) {
-		return (genre.ordinal()+1);
+		return (genre.ordinal() + 1);
 	}
-	public String genre() {
+
+		public String genre() {
 		switch (genreID) {
 		case 1:
 			return Genre.Science_fiction.name();
