@@ -9,7 +9,19 @@ public enum Genre {
 	private Genre(int genreID){
 		this.genreID=genreID;
 	}
-	public int getGenreID() {
-		return genreID;
+	public static int getGenreID(Genre genre) {
+		return (genre.ordinal()+1);
 	}
+	public String genre() {
+		switch (genreID) {
+		case 1:
+			return Genre.Science_fiction.name();
+		case 2:
+			return Genre.Historical_drama.name();
+		case 3:
+			return Genre.Fantasy.name();
+		}
+		return null;
+	}
+
 }
