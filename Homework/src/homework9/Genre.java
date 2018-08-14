@@ -1,7 +1,7 @@
 package homework9;
 
 public enum Genre {
-	Science_fiction, Historical_drama, Fantasy;
+	Science_fiction, Historical_drama, Fantasy, Philosophical_novel;
 
 	private int genreID;
 

@@ -3,7 +3,7 @@ package homework9;
 import java.sql.SQLException;
 
 public class BookManager {
-	public void addBook(Book book) throws SQLException {
+	public static void addBook(Book book) throws SQLException {
 		ConnectionUtils.loadDriver();
 		ConnectionUtils.connectToDataBase();
 			
@@ -17,7 +17,7 @@ public class BookManager {
 		
 	}
 
-	public void changeBook(Book book) throws SQLException {
+	public static void changeBook(Book book) throws SQLException {
 		ConnectionUtils.loadDriver();
 		ConnectionUtils.connectToDataBase();
 		
@@ -26,7 +26,7 @@ public class BookManager {
 		ConnectionUtils.closeConnection();
 	}
 
-	public void deleteBook(Book book)throws SQLException {
+	public static void deleteBook(Book book)throws SQLException {
 		ConnectionUtils.loadDriver();
 		ConnectionUtils.connectToDataBase();
 		ConnectionUtils.getConnection().createStatement().executeUpdate("DELETE FROM books WHERE name = " + book.getName() + "')");

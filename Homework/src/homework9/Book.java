@@ -1,7 +1,7 @@
 package homework9;
 
 public class Book {
-	private int id;
+	//private int id;
 	private String name;
 	private String author;
 	private Genre genre;
@@ -11,8 +11,8 @@ public class Book {
 		super();
 	}
 
-	public Book(int id, String name, String author, Genre genre, String isbn) {
-		this.id = id;
+	public Book(String name, String author, Genre genre, String isbn) {
+		//this.id = id;
 		this.name = name;
 		this.author = author;
 		this.genre = genre;
@@ -20,13 +20,13 @@ public class Book {
 	}
 
 	
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
+//	public int getId() {
+//		return id;
+//	}
+//
+//	public void setId(int id) {
+//		this.id = id;
+//	}
 
 	public String getName() {
 		return name;
@@ -62,7 +62,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", namek=" + name + ", author=" + author + ", genre=" + genre + ", isbn=" + isbn
+		return "Book [name=" + name + ", author=" + author + ", genre=" + genre + ", isbn=" + isbn
 				+ "]";
 	}
 
