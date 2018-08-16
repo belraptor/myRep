@@ -17,19 +17,24 @@ public class AuthorManager {
 				authorMap.put(rs.getInt(1), rs.getString(2));
 			}
 		}
-		ConnectionUtils.closeConnection();
+//		ConnectionUtils.closeConnection();
 	}
 
 	public static int getAuthorID(String author) throws SQLException {
 		getAuthorMap();
 		if (!authorMap.containsValue(author)) {
-			authorMap.put((authorMap.size() + 1), author);
+			addAuthor(author);
+			getAuthorMap();
+//			authorID = (authorMap.size() + 1);
+//			authorMap.put(authorID, author);
+			
 		} else
-			for (int i = 0; i < authorMap.size(); i++) {
-				if (author == authorMap.get(i)) {
+			for (int i = 1; i <= authorMap.size(); i++) {
+				if (!author.equals(null) && authorMap.get(i).equals(author)) {
 					authorID = i;
 					break;
 				}
+
 			}
 		return authorID;
 	}
@@ -39,7 +44,7 @@ public class AuthorManager {
 			ConnectionUtils.loadDriver();
 			ConnectionUtils.connectToDataBase();
 			ConnectionUtils.getConnection().createStatement()
-					.executeUpdate("INSERT INTO authors (author) VALUES ('" + author + "')");
+					.executeUpdate("INSERT INTO authors (name) VALUES ('" + author + "')");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

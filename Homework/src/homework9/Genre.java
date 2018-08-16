@@ -17,6 +17,8 @@ public enum Genre {
 			return Genre.Historical_drama.name();
 		case 3:
 			return Genre.Fantasy.name();
+		case 4:
+			return Genre.Philosophical_novel.name();
 		}
 		return null;
 	}
